@@ -1,0 +1,40 @@
+.theme__card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  min-height: 200px;
+  grid-template-areas: "info color";
+  background-color: lightgray;
+  color: black;
+  border-radius: 10px;
+}
+
+.theme-card__display {
+  grid-area: color;
+  position: relative;
+}
+
+.theme-card__color-name {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.theme-card__info {
+  grid-area: info;
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.theme-card__role {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.theme-card__hex {
+  color: darkgray;
+}
