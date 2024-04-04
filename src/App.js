@@ -1,5 +1,5 @@
 import "./App.css";
-import ThemeList from "./components/ThemeList/index";
+import ThemeDetail from "./components/ThemeDetail/index";
 import { themes } from "./db";
 import Header from "./components/Header/index";
 
@@ -14,7 +14,7 @@ function App() {
             <ul className="color__list">
               {theme.colors.map((color) => (
                 <li key={color.role}>
-                  <ThemeList color={color} />
+                  <ThemeDetail color={color} />
                 </li>
               ))}
             </ul>

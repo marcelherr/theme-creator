@@ -1,4 +1,4 @@
-.theme__list {
+.theme__detail {
   display: grid;
   grid-template-columns: 200px 1fr;
   min-height: 200px;
@@ -8,12 +8,12 @@
   border-radius: 10px;
 }
 
-.list__display {
+.detail__display {
   grid-area: color;
   position: relative;
 }
 
-.list__info {
+.detail__info {
   grid-area: info;
   padding: 15px 15px;
   display: flex;
@@ -21,11 +21,11 @@
   gap: 10px;
 }
 
-.list__role {
+.detail__role {
   font-size: 20px;
   font-weight: bold;
 }
 
-.list__hex {
+.detail__hex {
   color: darkgray;
 }
