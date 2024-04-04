@@ -1,12 +1,12 @@
 import "./App.css";
-import ThemeCard from "./components/ThemeCard/index";
+import ThemeList from "./components/ThemeList/index";
 import { themes } from "./db";
 import Header from "./components/Header/index";
 
 function App() {
   return (
     <div>
-      <Header className="header" />
+      <Header />
       <main className="main__container">
         {themes.map((theme) => (
           <div key={theme.name}>
@@ -14,7 +14,7 @@ function App() {
             <ul className="color__list">
               {theme.colors.map((color) => (
                 <li key={color.role}>
-                  <ThemeCard color={color} />
+                  <ThemeList color={color} />
                 </li>
               ))}
             </ul>
