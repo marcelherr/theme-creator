@@ -22,7 +22,11 @@ export default function Theme({ name, colors, onDeleteClick }) {
       </button>
       {showDetails ? (
         <div>
-          <button type="button" className="delete-button">
+          <button
+            type="button"
+            className="delete-button"
+            onClick={onDeleteClick}
+          >
             delete button
           </button>
           <ThemeList colors={colors} />

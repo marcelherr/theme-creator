@@ -12,11 +12,10 @@ function App() {
   function handleAddTheme(newTheme) {
     const newThemeWithId = { ...newTheme, id: uuid() };
     setThemes([newThemeWithId, ...themes]);
-
-    // function handleDeleteTheme(id) {
-    //   const modifiedState = themes.filter((item) => item.id !== id);
-    //   setThemes(modifiedState);
-    // }
+  }
+  function handleDeleteTheme(id) {
+    const themeState = themes.filter((item) => item.id !== id);
+    setThemes(themeState);
   }
 
   return (
@@ -27,7 +26,11 @@ function App() {
         <ul className="theme-list">
           {themes.map((theme) => (
             <li key={theme.id}>
-              <Theme name={theme.name} colors={theme.colors} />
+              <Theme
+                name={theme.name}
+                colors={theme.colors}
+                onDeleteClick={() => handleDeleteTheme(theme.id)}
+              />
             </li>
           ))}
         </ul>
