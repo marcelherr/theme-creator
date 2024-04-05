@@ -1,53 +1,39 @@
 import "./App.css";
-import ThemeDetail from "./components/ThemeDetail/index";
-import { themes } from "./db";
+import { themes as initialThemes } from "./db";
 import Header from "./components/Header/index";
+import Theme from "./components/Theme";
+import { v4 as uuid } from "uuid";
+import { useState } from "react";
+import ThemeForm from "./components/ThemeForm";
 
 function App() {
+  const [themes, setThemes] = useState(initialThemes);
+
+  function handleAddTheme(newTheme) {
+    const newThemeWithId = { ...newTheme, id: uuid() };
+    setThemes([newThemeWithId, ...themes]);
+
+    // function handleDeleteTheme(id) {
+    //   const modifiedState = themes.filter((item) => item.id !== id);
+    //   setThemes(modifiedState);
+    // }
+  }
+
   return (
-    <div>
+    <>
       <Header />
-      <main className="main__container">
-        {themes.map((theme) => (
-          <div key={theme.name}>
-            <h2 className="theme__title">{theme.name}</h2>
-            <ul className="color__list">
-              {theme.colors.map((color) => (
-                <li key={color.role}>
-                  <ThemeDetail color={color} />
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <main className="main-container">
+        <ThemeForm onSubmit={handleAddTheme} />
+        <ul className="theme-list">
+          {themes.map((theme) => (
+            <li key={theme.id}>
+              <Theme name={theme.name} colors={theme.colors} />
+            </li>
+          ))}
+        </ul>
       </main>
-    </div>
+    </>
   );
 }
 
 export default App;
-
-// import "./App.css";
-
-// import Theme from "./components/Theme";
-
-// function App() {
-//   return (
-//     <>
-//       <header className="header">
-//         <h1>Theme Creator</h1>
-//       </header>
-//       <main className="main-container">
-//         <ul className="theme-list">
-//           {themes.map((theme) => (
-//             <li key={theme.id}>
-//               <Theme name={theme.name} colors={theme.colors} />
-//             </li>
-//           ))}
-//         </ul>
-//       </main>
-//     </>
-//   );
-// }
-
-// export default App;

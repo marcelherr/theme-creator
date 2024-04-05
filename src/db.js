@@ -1,7 +1,7 @@
 export const themes = [
   {
     id: "0",
-    name: "Vivid Meadow",
+    name: "Vivid Meadow ",
     colors: [
       {
         role: "primary",

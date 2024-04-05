@@ -1,23 +1,14 @@
-.main__container {
-  max-width: 600px;
+.main-container {
+  max-width: 650px;
   margin: 0 auto;
-  padding: 0 10px 16px;
 }
 
-.theme__title {
-  font-size: 30px;
-}
-
-.color__list {
+.theme-list {
   display: grid;
-  gap: 10px;
+  gap: 30px;
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
+  padding: 0;
 }
-
-/* .theme-list {
-  display: grid;
-  gap: 3rem;
-} */
