@@ -27,7 +27,7 @@ export default function Theme({ name, colors, onDeleteClick }) {
             className="delete-button"
             onClick={onDeleteClick}
           >
-            delete button
+            Delete Theme
           </button>
           <ThemeList colors={colors} />
         </div>

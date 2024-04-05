@@ -4,12 +4,13 @@ export default function ThemeDetail({ color }) {
   return (
     <article className="theme-detail">
       <div
-        className="theme__display"
+        className="theme-display"
         style={{ backgroundColor: color.value }}
       ></div>
-      <div className="theme__info">
-        <span className="theme__role">{color.role}</span>
-        <span className="theme__hex">{color.value}</span>
+      <div className="theme-info">
+        <span className="theme-role">{color.role}</span>
+        <span className="hex-name">color name placeholder</span>
+        <span className="theme-hex">{color.value}</span>
       </div>
     </article>
   );
