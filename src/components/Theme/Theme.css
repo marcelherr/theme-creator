@@ -1,16 +1,29 @@
-.theme__title {
+.theme-title {
   font-size: 30px;
   margin: 0;
 }
 
-.theme__toggle-button {
+.toggle-button {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 8px;
 }
+
 .delete-button {
   font-size: 20px;
   border-radius: 8px;
   background-color: rgba(224, 24, 24, 0.653);
+}
+
+.delete-button {
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: rgba(224, 24, 24, 0.653);
+}
+
+.edit-button {
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: rgba(224, 191, 24, 0.653);
 }

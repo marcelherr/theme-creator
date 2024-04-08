@@ -1,3 +1,9 @@
+.save-button {
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: rgba(24, 221, 224, 0.653);
+}
+
 .theme-form {
   display: grid;
   gap: 10px;
@@ -22,7 +28,7 @@
   width: 150px;
 }
 
-.submit-button {
+.save-button {
   font-size: 18px;
   border-radius: 8px;
   background-color: lightgray;
