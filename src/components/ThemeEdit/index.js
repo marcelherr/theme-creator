@@ -50,7 +50,7 @@ export default function EditThemeForm({ onSaveClick }) {
       <input
         className="name-input"
         type="text"
-        placeholder="Theme Name"
+        placeholder="Edit Name"
         name="name"
         defaultValue={initialData.name}
         required
