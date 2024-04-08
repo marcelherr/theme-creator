@@ -1,13 +1,15 @@
 import "./App.css";
-import { themes as initialThemes } from "./db";
+import { themes as initialTheme } from "./db";
 import Header from "./components/Header/index";
 import Theme from "./components/Theme";
 import { v4 as uuid } from "uuid";
-import { useState } from "react";
 import ThemeForm from "./components/ThemeForm";
+import useLocalStorageState from "use-local-storage-state";
 
 function App() {
-  const [themes, setThemes] = useState(initialThemes);
+  const [themes, setThemes] = useLocalStorageState("themes", {
+    defaultValue: initialTheme,
+  });
 
   function handleAddTheme(newTheme) {
     const newThemeWithId = { ...newTheme, id: uuid() };
