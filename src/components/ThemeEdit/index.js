@@ -1,25 +1,25 @@
-import "./ThemeForm.css";
+import "./ThemeEdit.css";
 
 const initialTheme = {
   name: "",
   colors: [
-    { role: "primary", value: "#d896ff" },
+    { role: "primary test", value: "#d896ff" },
     { role: "secondary", value: "#009999" },
     { role: "surface", value: "#da0b94" },
     { role: "surface-on", value: "#b7eced" },
   ],
 };
 
-export default function ThemeForm({ onSubmit }) {
+export default function EditThemeForm({ onSaveClick }) {
   const initialData = initialTheme;
 
-  function handleSubmit(event) {
+  function handleSaveTheme(event) {
     event.preventDefault();
     const form = event.target;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
 
-    const newTheme = {
+    const editedTheme = {
       name: data.name,
       colors: [
         {
@@ -41,12 +41,12 @@ export default function ThemeForm({ onSubmit }) {
       ],
     };
 
-    onSubmit(newTheme);
+    onSaveClick(editedTheme);
   }
 
   return (
-    <form className="theme-form" onSubmit={handleSubmit}>
-      <h2 className="form-title">Add new Theme</h2>
+    <form className="theme-form" onSaveClick={handleSaveTheme}>
+      <h2 className="form-title">Edit Theme</h2>
       <input
         className="name-input"
         type="text"
@@ -67,8 +67,8 @@ export default function ThemeForm({ onSubmit }) {
           />
         ))}
       </fieldset>
-      <button className="submit-button" type="submit">
-        Add Theme
+      <button className="save-button" type="submit">
+        Save Theme
       </button>
     </form>
   );

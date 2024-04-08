@@ -20,10 +20,12 @@ function App() {
     setThemes(themeState);
   }
 
-  function handleEditTheme() {
-    console.log("edit button clicked");
-  }
-
+  // function handleEditTheme() {
+  //   console.log("edit button clicked");
+  // }
+  // function handleSaveTheme() {
+  //   console.log("Save button clicked");
+  // }
   return (
     <>
       <Header />
@@ -36,7 +38,8 @@ function App() {
                 name={theme.name}
                 colors={theme.colors}
                 onDeleteClick={() => handleDeleteTheme(theme.id)}
-                onEditClick={() => handleEditTheme()}
+                // onEditClick={() => handleEditTheme()}
+                // onSaveClick={() => handleSaveTheme()}
               />
             </li>
           ))}
