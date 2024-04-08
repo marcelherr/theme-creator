@@ -46,10 +46,10 @@ export default function ThemeForm({ onSubmit }) {
 
   return (
     <form className="theme-form" onSubmit={handleSubmit}>
-      <h2 className="form__title">Add new Theme</h2>
+      <h2 className="form-title">Add new Theme</h2>
       <input
         aria-label="theme title"
-        className="form__name-input"
+        className="name-input"
         type="text"
         placeholder="Theme Name"
         name="name"
@@ -60,7 +60,7 @@ export default function ThemeForm({ onSubmit }) {
         {initialData.colors.map((color) => (
           <input
             key={color.role}
-            className="form__color-input-box"
+            className="color-input-box"
             type="color"
             name={color.role}
             aria-label={color.role}

@@ -3,19 +3,19 @@
   gap: 10px;
 }
 
-.form__title {
+.form-title {
   font-size: 30px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.form__name-input {
+.name-input {
   padding: 5px;
   font-size: 20px;
   border: 2px solid lightgray;
 }
 
-.form__color-input-box {
+.color-input-box {
   box-sizing: border-box;
   width: 100%;
   height: 150px;
